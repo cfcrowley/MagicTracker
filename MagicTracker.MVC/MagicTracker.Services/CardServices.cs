@@ -69,9 +69,22 @@ namespace MagicTracker.Services
             {
                 var entity = ctx.Cards.Single(e => e.CardId == model.CardId);
 
+                entity.CardId = model.CardId;
                 entity.Name = model.Name;
                 entity.CardType = model.CardType;
                 entity.ManaValue = model.ManaValue;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCard(int cardId)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Cards.Single(e => e.CardId == cardId);
+
+                ctx.Cards.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }
