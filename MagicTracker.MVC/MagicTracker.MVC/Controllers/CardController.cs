@@ -46,8 +46,19 @@ namespace MagicTracker.MVC.Controllers
 
             if (service.CreateCard(model))
             {
+                TempData["SaveResult"] = "Your Card was created.";
                 return RedirectToAction("Index");
             }
+
+            ModelState.AddModelError("", "Card couldn't be created");
+
+            return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateCardService();
+            var model = svc.GetCardsById(id);
 
             return View(model);
         }

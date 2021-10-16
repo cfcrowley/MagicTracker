@@ -46,5 +46,21 @@ namespace MagicTracker.Services
                 return query.ToArray();
             }
         }
+
+        public CardDetail GetCardDetail(int id)
+        {
+            using( var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Cards.Single(e => e.CardId == id);
+                return
+                    new CardDetail
+                    {
+                        CardId = entity.CardId,
+                        Name = entity.Name,
+                        CardType = entity.CardType,
+                        ManaValue = entity.ManaValue
+                    };
+            }
+        }
     }
 }
