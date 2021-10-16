@@ -47,7 +47,7 @@ namespace MagicTracker.Services
             }
         }
 
-        public CardDetail GetCardDetail(int id)
+        public CardDetail GetCardById(int id)
         {
             using( var ctx = new ApplicationDbContext())
             {
@@ -60,6 +60,20 @@ namespace MagicTracker.Services
                         CardType = entity.CardType,
                         ManaValue = entity.ManaValue
                     };
+            }
+        }
+
+        public bool UpdateCard(CardEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Cards.Single(e => e.CardId == model.CardId);
+
+                entity.Name = model.Name;
+                entity.CardType = model.CardType;
+                entity.ManaValue = model.ManaValue;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }
