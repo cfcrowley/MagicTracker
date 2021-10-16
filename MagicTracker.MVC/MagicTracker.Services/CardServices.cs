@@ -17,7 +17,6 @@ namespace MagicTracker.Services
                 {
                     Name = model.Name,
                     CardType = model.CardType,
-                    CardType2 = model.CardType,
                     ManaValue = model.ManaValue
                 };
 
@@ -42,7 +41,6 @@ namespace MagicTracker.Services
                                     CardId = e.CardId,
                                     Name = e.Name,
                                     CardType = e.CardType,
-                                    CardType2 = e.CardType2,
                                     ManaValue = e.ManaValue
                                 });
                 return query.ToArray();

@@ -33,13 +33,22 @@ namespace MagicTracker.MVC.Controllers
 
         //Post
         [HttpPost]
+        [ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Card model)
+        public ActionResult Create(CardCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-
+                return View(model);
             }
+
+            var service = CreateCardService();
+
+            if (service.CreateCard(model))
+            {
+                return RedirectToAction("Index");
+            }
+
             return View(model);
         }
     }

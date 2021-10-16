@@ -17,7 +17,6 @@ namespace MagicTracker.Data
         [Required]
         [Display(Name = "Card Type")]
         public CardType CardType { get; set; }
-        public CardType? CardType2 { get; set; }
         [Required]
         [Display(Name = "Mana Value")]
         public int ManaValue { get; set; }
