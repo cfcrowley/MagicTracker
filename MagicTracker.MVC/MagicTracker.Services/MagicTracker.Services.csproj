@@ -63,5 +63,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MagicTracker.Data\MagicTracker.Data.csproj">
+      <Project>{99EDEAB4-EAD0-47AE-BC36-723866AF3D09}</Project>
+      <Name>MagicTracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicTracker.Models\MagicTracker.Models.csproj">
+      <Project>{3C13FB8B-18C1-4E07-9E00-5D1EF2A0C2F9}</Project>
+      <Name>MagicTracker.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
