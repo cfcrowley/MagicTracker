@@ -237,10 +237,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Card\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Card\" />
     <Folder Include="Views\Deck\" />
     <Folder Include="Views\Sideboard\" />
   </ItemGroup>
@@ -261,6 +261,14 @@
     <ProjectReference Include="..\MagicTracker.Data\MagicTracker.Data.csproj">
       <Project>{99EDEAB4-EAD0-47AE-BC36-723866AF3D09}</Project>
       <Name>MagicTracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicTracker.Models\MagicTracker.Models.csproj">
+      <Project>{3c13fb8b-18c1-4e07-9e00-5d1ef2a0c2f9}</Project>
+      <Name>MagicTracker.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicTracker.Services\MagicTracker.Services.csproj">
+      <Project>{8dff34a4-9d23-4811-a215-846c6efaa4b8}</Project>
+      <Name>MagicTracker.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

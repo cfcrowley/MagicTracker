@@ -57,12 +57,22 @@
     <Compile Include="Card.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202110161730222_initialmigration.cs" />
+    <Compile Include="Migrations\202110161730222_initialmigration.Designer.cs">
+      <DependentUpon>202110161730222_initialmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sideboard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110161730222_initialmigration.resx">
+      <DependentUpon>202110161730222_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
