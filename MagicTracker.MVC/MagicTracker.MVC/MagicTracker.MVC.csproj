@@ -242,10 +242,11 @@
     <Content Include="Views\Card\Details.cshtml" />
     <Content Include="Views\Card\Edit.cshtml" />
     <Content Include="Views\Card\Delete.cshtml" />
+    <Content Include="Views\Deck\Index.cshtml" />
+    <Content Include="Views\Deck\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Deck\" />
     <Folder Include="Views\Sideboard\" />
   </ItemGroup>
   <ItemGroup>

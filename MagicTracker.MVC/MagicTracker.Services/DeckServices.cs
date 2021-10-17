@@ -49,7 +49,7 @@ namespace MagicTracker.Services
             }
         }
 
-        public DeckDetail GetCardById(int id)
+        public DeckDetail GetDeckById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
