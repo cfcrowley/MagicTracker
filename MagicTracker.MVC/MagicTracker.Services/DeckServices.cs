@@ -49,32 +49,39 @@ namespace MagicTracker.Services
             }
         }
 
-        public CardDetail GetCardById(int id)
+        public DeckDetail GetCardById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Cards.Single(e => e.CardId == id);
+                var entity = ctx.Decks.Single(e => e.DeckId == id);
                 return
-                    new CardDetail
+                    new DeckDetail
                     {
-                        CardId = entity.CardId,
-                        Name = entity.Name,
-                        CardType = entity.CardType,
-                        ManaValue = entity.ManaValue
+                        DeckId = entity.DeckId,
+                        DeckType = entity.DeckType,
+                        CardCount = entity.CardCount,
+                        Commander = entity.Commander,
+                        Companion = entity.Companion,
+                        SideboardId = entity.SideboardId
                     };
             }
         }
 
-        public bool UpdateCard(CardEdit model)
+        public IEnumerable<CardDetail> GetCardsInDeck(int id) { }
+
+        public bool UpdateCard(DeckEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Cards.Single(e => e.CardId == model.CardId);
+                var entity = ctx.Decks.Single(e => e.DeckId == model.DeckId);
 
-                entity.CardId = model.CardId;
-                entity.Name = model.Name;
-                entity.CardType = model.CardType;
-                entity.ManaValue = model.ManaValue;
+                entity.DeckId = model.DeckId;
+                entity.DeckType = model.DeckType;
+                entity.CardCount = model.CardCount;
+                entity.DeckStyle = model.DeckStyle;
+                entity.Commander = model.Commander;
+                entity.Companion = model.Companion;
+                entity.SideboardId = model.SideboardId;
 
                 return ctx.SaveChanges() == 1;
             }

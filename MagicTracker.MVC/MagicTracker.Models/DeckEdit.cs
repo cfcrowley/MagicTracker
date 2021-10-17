@@ -10,6 +10,7 @@ namespace MagicTracker.Models
 {
     public class DeckEdit
     {
+        public int DeckId { get; set; }
         [Required]
         public DeckType DeckType { get; set; }
         [Required]
