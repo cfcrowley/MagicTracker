@@ -10,8 +10,11 @@ namespace MagicTracker.Models
 {
     public class CardCreate
     {
+        [Required]
         public string Name { get; set; }
+        [Required]
         public CardType CardType { get; set; }
+        [Required]
         public int ManaValue { get; set; }
     }
 }
