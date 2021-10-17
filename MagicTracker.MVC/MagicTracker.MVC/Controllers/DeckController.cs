@@ -103,5 +103,28 @@ namespace MagicTracker.MVC.Controllers
             ModelState.AddModelError("", "Your card could not be updated");
             return View(model);
         }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateDeckService();
+            var model = svc.GetDeckById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteDeck(int id)
+        {
+            var svc = CreateDeckService();
+
+            svc.DeleteDeck(id);
+
+            TempData["Save Result"] = "Card was Deleted";
+
+            return RedirectToAction("Index");
+        }
     }
 }

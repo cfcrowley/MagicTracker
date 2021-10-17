@@ -246,6 +246,7 @@
     <Content Include="Views\Deck\Create.cshtml" />
     <Content Include="Views\Deck\Details.cshtml" />
     <Content Include="Views\Deck\Edit.cshtml" />
+    <Content Include="Views\Deck\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

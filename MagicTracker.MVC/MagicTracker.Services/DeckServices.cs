@@ -91,9 +91,9 @@ namespace MagicTracker.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Cards.Single(e => e.CardId == cardId);
+                var entity = ctx.Decks.Single(e => e.DeckId == cardId);
 
-                ctx.Cards.Remove(entity);
+                ctx.Decks.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }
