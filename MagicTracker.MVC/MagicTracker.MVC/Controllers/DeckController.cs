@@ -51,5 +51,57 @@ namespace MagicTracker.MVC.Controllers
 
             return View(model);
         }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateDeckService();
+            var model = svc.GetDeckById(id);
+
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var svc = CreateDeckService();
+            var detail = svc.GetDeckById(id);
+            var model =
+                new DeckEdit
+                {
+                    DeckId = detail.DeckId,
+                    DeckType = detail.DeckType,
+                    CardCount = detail.CardCount,
+                    DeckStyle = detail.DeckStyle,
+                    Commander = detail.Commander,
+                    Companion = detail.Companion,
+                    SideboardId = detail.SideboardId
+                };
+
+            return View(model);
+        }
+
+        // Edit Post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, DeckEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.DeckId != id)
+            {
+                ModelState.AddModelError("", "Id does not match");
+                return View(model);
+            }
+
+            var svc = CreateDeckService();
+
+            if (svc.UpdateDeck(model))
+            {
+                TempData["SaveResult"] = "Your deck was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your card could not be updated");
+            return View(model);
+        }
     }
 }

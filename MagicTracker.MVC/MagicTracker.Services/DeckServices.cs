@@ -67,9 +67,9 @@ namespace MagicTracker.Services
             }
         }
 
-        public IEnumerable<CardDetail> GetCardsInDeck(int id) { }
+        //public IEnumerable<CardDetail> GetCardsInDeck(int id) { }
 
-        public bool UpdateCard(DeckEdit model)
+        public bool UpdateDeck(DeckEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -87,7 +87,7 @@ namespace MagicTracker.Services
             }
         }
 
-        public bool DeleteCard(int cardId)
+        public bool DeleteDeck(int cardId)
         {
             using (var ctx = new ApplicationDbContext())
             {
