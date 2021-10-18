@@ -62,7 +62,7 @@ namespace MagicTracker.Services
                         CardCount = entity.CardCount,
                         Commander = entity.Commander,
                         Companion = entity.Companion,
-                        SideboardId = entity.SideboardId
+                       
                     };
             }
         }
@@ -81,7 +81,7 @@ namespace MagicTracker.Services
                 entity.DeckStyle = model.DeckStyle;
                 entity.Commander = model.Commander;
                 entity.Companion = model.Companion;
-                entity.SideboardId = model.SideboardId;
+               
 
                 return ctx.SaveChanges() == 1;
             }

@@ -20,6 +20,6 @@ namespace MagicTracker.Models
         public string DeckStyle { get; set; }
         public string Commander { get; set; }
         public string Companion { get; set; }
-        public int SideboardId { get; set; }
+        
     }
 }

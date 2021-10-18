@@ -73,7 +73,7 @@ namespace MagicTracker.MVC.Controllers
                     DeckStyle = detail.DeckStyle,
                     Commander = detail.Commander,
                     Companion = detail.Companion,
-                    SideboardId = detail.SideboardId
+                    
                 };
 
             return View(model);
