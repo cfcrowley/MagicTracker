@@ -22,9 +22,9 @@ namespace MagicTracker.Data
         [Display(Name = "Mana Value")]
         public int ManaValue { get; set; }
         [ForeignKey(nameof(Deck))]
-        public int DeckId { get; set; }
+        public int? DeckId { get; set; }
         [ForeignKey(nameof(Sideboard))]
-        public int SideboardId { get; set; }
+        public int? SideboardId { get; set; }
 
         public virtual Deck Deck { get; set; }
         public virtual Sideboard Sideboard { get; set; }
