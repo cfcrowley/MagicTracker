@@ -24,8 +24,7 @@ namespace MagicTracker.Data
         public string DeckStyle { get; set; }
         public string Commander { get; set; }
         public string Companion { get; set; }
-        [ForeignKey(nameof(Sideboard))]
-        public int SideboardId { get; set; }
+        
 
         public virtual List<Card> Cards { get; set; }
         public virtual Sideboard Sideboard { get; set; }

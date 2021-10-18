@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MagicTracker.Models.DeckListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if(TempData.ContainsKey("SaveResult"))
+ {                                   
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>               
+ }
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DeckId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeckType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeckStyle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeckId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeckType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CardCount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeckStyle)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id=item.DeckId }) |
+        @Html.ActionLink("Details", "Details", new { id=item.DeckId }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.DeckId })
+    </td>
+</tr>
+}
+
+</table>
