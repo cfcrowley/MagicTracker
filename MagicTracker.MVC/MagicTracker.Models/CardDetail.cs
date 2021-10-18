@@ -14,7 +14,7 @@ namespace MagicTracker.Models
         public CardType CardType { get; set; }
         public int ManaValue { get; set; }
 
-        public int DeckId { get; set; }
-        public int SideboardId { get; set; }
+        public int? DeckId { get; set; }
+        public int? SideboardId { get; set; }
     }
 }
