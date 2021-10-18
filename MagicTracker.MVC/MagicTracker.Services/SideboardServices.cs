@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicTracker.Services
 {
-    public class Sideboard
+    public class SideboardServices
     {
     }
 }

@@ -11,5 +11,9 @@ namespace MagicTracker.Data
     {
         [Key]
         public int SideboardId { get; set; }
+        [Required]
+        [Range(0,15)]
+        [Display(Name ="Card Count")]
+        public int CardCount { get; set; }
     }
 }

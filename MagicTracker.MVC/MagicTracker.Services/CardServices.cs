@@ -58,7 +58,9 @@ namespace MagicTracker.Services
                         CardId = entity.CardId,
                         Name = entity.Name,
                         CardType = entity.CardType,
-                        ManaValue = entity.ManaValue
+                        ManaValue = entity.ManaValue,
+                        DeckId = entity.DeckId,
+                        SideboardId = entity.SideboardId
                     };
             }
         }
@@ -73,6 +75,8 @@ namespace MagicTracker.Services
                 entity.Name = model.Name;
                 entity.CardType = model.CardType;
                 entity.ManaValue = model.ManaValue;
+                entity.DeckId = model.DeckId;
+                entity.SideboardId = model.SideboardId;
 
                 return ctx.SaveChanges() == 1;
             }
