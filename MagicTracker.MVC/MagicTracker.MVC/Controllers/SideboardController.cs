@@ -83,7 +83,7 @@ namespace MagicTracker.MVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.DeckId != id)
+            if (model.SideboardId != id)
             {
                 ModelState.AddModelError("", "Id does not match");
                 return View(model);

@@ -203,6 +203,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Style\StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -247,11 +248,11 @@
     <Content Include="Views\Deck\Delete.cshtml" />
     <Content Include="Views\Card\Create.cshtml" />
     <Content Include="Views\Deck\Create.cshtml" />
-    <Content Include="Views\Sideboard\Index.cshtml" />
     <Content Include="Views\Sideboard\Create.cshtml" />
     <Content Include="Views\Sideboard\Details.cshtml" />
     <Content Include="Views\Sideboard\Edit.cshtml" />
     <Content Include="Views\Sideboard\Delete.cshtml" />
+    <Content Include="Views\Sideboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
