@@ -26,7 +26,7 @@ namespace MagicTracker.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Decks.Add(entity);
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() >= 1;
             }
         }
 
@@ -86,7 +86,7 @@ namespace MagicTracker.Services
                 entity.SideboardId = model.SideboardId;
                
 
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() >= 1;
             }
         }
 
@@ -98,7 +98,7 @@ namespace MagicTracker.Services
 
                 ctx.Decks.Remove(entity);
 
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() >= 1;
             }
         }
     }
