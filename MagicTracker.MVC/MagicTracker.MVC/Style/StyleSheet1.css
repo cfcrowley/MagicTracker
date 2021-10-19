@@ -1,0 +1,15 @@
+﻿body {
+    background-color:dodgerblue;
+}
+
+#nav li a:hover 
+{
+    color: #C64322;
+    background-color: rgba(252,251,243,0.75);
+}
+
+#nav 
+{
+    background-color: blanchedalmond;
+
+}
