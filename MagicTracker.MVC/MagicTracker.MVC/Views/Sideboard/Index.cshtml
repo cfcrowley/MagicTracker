@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MagicTracker.Data.Sideboard>
+﻿@model IEnumerable<MagicTracker.Models.SideboardListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Deck.DeckStyle)
+            @Html.DisplayNameFor(model => model.SideboardId)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CardCount)
@@ -20,13 +20,16 @@
         <th>
             @Html.DisplayNameFor(model => model.CardStyle)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeckId)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Deck.DeckStyle)
+            @Html.DisplayFor(modelItem => item.SideboardId)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CardCount)
@@ -35,9 +38,12 @@
             @Html.DisplayFor(modelItem => item.CardStyle)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SideboardId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SideboardId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SideboardId })
+            @Html.DisplayFor(modelItem => item.DeckId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.SideboardId  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.SideboardId  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.SideboardId })
         </td>
     </tr>
 }
