@@ -7,13 +7,13 @@ namespace MagicTracker.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class test : IMigrationMetadata
+    public sealed partial class trying : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(test));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(trying));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110182014141_test"; }
+            get { return "202110191447010_trying"; }
         }
         
         string IMigrationMetadata.Source

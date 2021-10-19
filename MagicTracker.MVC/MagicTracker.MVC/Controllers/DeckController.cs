@@ -72,8 +72,8 @@ namespace MagicTracker.MVC.Controllers
                     CardCount = detail.CardCount,
                     DeckStyle = detail.DeckStyle,
                     Commander = detail.Commander,
-                    Companion = detail.Companion,
-                    SideboardId = detail.SideboardId
+                    Companion = detail.Companion
+                   
                     
                 };
 

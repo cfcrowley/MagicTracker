@@ -247,10 +247,14 @@
     <Content Include="Views\Deck\Delete.cshtml" />
     <Content Include="Views\Card\Create.cshtml" />
     <Content Include="Views\Deck\Create.cshtml" />
+    <Content Include="Views\Sideboard\Index.cshtml" />
+    <Content Include="Views\Sideboard\Create.cshtml" />
+    <Content Include="Views\Sideboard\Details.cshtml" />
+    <Content Include="Views\Sideboard\Edit.cshtml" />
+    <Content Include="Views\Sideboard\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Sideboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
