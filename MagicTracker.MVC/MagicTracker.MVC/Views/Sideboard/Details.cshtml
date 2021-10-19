@@ -1,0 +1,50 @@
+﻿@model MagicTracker.Models.SideboardDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SideboardDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SideboardId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SideboardId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardStyle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardStyle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeckId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeckId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.SideboardId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
