@@ -13,3 +13,28 @@
     background-color: blanchedalmond;
 
 }
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.cards{
+    text-align: center;
+    padding: 1em;
+    border: 0.5em solid black;
+    background-color:antiquewhite;
+}
+
+.decks {
+    text-align: center;
+    padding: 1em;
+    border: 0.5em solid black;
+    background-color: antiquewhite;
+}
+
+.sideboards {
+    text-align: center;
+    padding: 1em;
+    border: 0.5em solid black;
+    background-color: antiquewhite;
+}
