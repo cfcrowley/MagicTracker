@@ -205,6 +205,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Style\StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -240,15 +241,23 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Card\Index.cshtml" />
-    <Content Include="Views\Card\Create.cshtml" />
     <Content Include="Views\Card\Details.cshtml" />
     <Content Include="Views\Card\Edit.cshtml" />
     <Content Include="Views\Card\Delete.cshtml" />
+    <Content Include="Views\Deck\Index.cshtml" />
+    <Content Include="Views\Deck\Details.cshtml" />
+    <Content Include="Views\Deck\Edit.cshtml" />
+    <Content Include="Views\Deck\Delete.cshtml" />
+    <Content Include="Views\Card\Create.cshtml" />
+    <Content Include="Views\Deck\Create.cshtml" />
+    <Content Include="Views\Sideboard\Create.cshtml" />
+    <Content Include="Views\Sideboard\Details.cshtml" />
+    <Content Include="Views\Sideboard\Edit.cshtml" />
+    <Content Include="Views\Sideboard\Delete.cshtml" />
+    <Content Include="Views\Sideboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Deck\" />
-    <Folder Include="Views\Sideboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

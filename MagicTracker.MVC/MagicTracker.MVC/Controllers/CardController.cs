@@ -73,7 +73,9 @@ namespace MagicTracker.MVC.Controllers
                     CardId = detail.CardId,
                     Name = detail.Name,
                     CardType = detail.CardType,
-                    ManaValue = detail.ManaValue
+                    ManaValue = detail.ManaValue,
+                    DeckId = detail.DeckId,
+                    SideboardId = detail.SideboardId
                 };
 
             return View(model);

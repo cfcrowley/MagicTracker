@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MagicTracker.Models.SideboardListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SideboardId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardStyle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeckId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SideboardId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardStyle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeckId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.SideboardId  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.SideboardId  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.SideboardId })
+        </td>
+    </tr>
+}
+
+</table>

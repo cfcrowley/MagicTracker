@@ -8,5 +8,9 @@ namespace MagicTracker.Models
 {
     public class SideboardEdit
     {
+        public int SideboardId { get; set; }
+        public int CardCount { get; set; }
+        public string CardStyle { get; set; }
+        public int DeckId { get; set; }
     }
 }
