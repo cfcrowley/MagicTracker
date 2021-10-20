@@ -57,7 +57,7 @@
     <Compile Include="CardServices.cs" />
     <Compile Include="DeckServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sideboard.cs" />
+    <Compile Include="SideboardServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
